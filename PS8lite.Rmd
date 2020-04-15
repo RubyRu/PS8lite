@@ -196,15 +196,6 @@ model_rf <- randomForest(
 )
 ```
 
-```{r}
-# Predict on test data
-test <- test %>% 
-  mutate(
-    logSalePrice_hat = predict(object = model_rf, newdata = test),
-    SalePrice_hat = exp(logSalePrice_hat) -1
-  )
-```
-
 ***
 
 # Make predictions and submit to Kaggle
