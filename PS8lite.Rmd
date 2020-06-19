@@ -201,7 +201,7 @@ model_rf <- randomForest(
 # Make predictions and submit to Kaggle
 
 Using `model_rf` make predictions and submit to Kaggle.
-
+hi
 ```{r}
 # Predict on test data
 test <- test %>% 
@@ -216,6 +216,7 @@ submission_rf <- test %>%
   mutate(SalePrice = SalePrice_hat) %>%
   select(Id, SalePrice)
 write_csv(submission_rf, "submission_rf.csv")
+
 ```
 
 
